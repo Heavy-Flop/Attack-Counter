@@ -1,0 +1,11 @@
+<ul>
+<li>PLATFORM: Initial JDK21 support added. .</li>
+<li>BUGFIX: Any <code>@Helper</code> class directly in a method (and not nested more deeply) wouldn't work. .</li>
+<li>BUGFIX: If using the module system and lombok is on the runtime classpath (shouldn't be, but happens), you'd get a split package error: <code>Package org.objectweb.asm in both module lombok and module org.objectweb.asm</code>.</li>
+<li>BUGFIX: Lombok wasn't properly copying the annotations it should be copying when generating methods in <code>record</code>s. .</li>
+<li>BUGFIX: Delomboking anything with <code>@lombok.Singular</code> in it wouldn't remove that annotation. .</li>
+<li>BUGFIX: Calling extension methods such that automatic widening is applied (i.e. calling <code>void ext(long arg)</code> with an <code>int</code>) would fail at runtime. .</li>
+<li>BUGFIX: Extension methods can now be used in records. .</li>
+<li>BUGFIX: <code>@Getter(lazy=true)</code> with complicated initialization expressions would fail on javac. .</li>
+<li>BUGFIX: Using the maven surefire plugin with a <code>module-info.java</code> based project would fail with a <code>SurefireBooterForkException</code>. .</li>
+</ul>
